@@ -1,0 +1,374 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --primary-pastel-pink: #F8C8DC; /* Rosa Pastel */
+    --secondary-pastel-lilac: #D8BFD8; /* Lilás Pastel */
+    --accent-white: #FFFFFF; /* Branco Puro */
+    --text-color: #555555; /* Cinza suave para texto */
+    --light-bg-color: #FDF9F3; /* Fundo muito claro */
+    --dark-text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: var(--primary-pastel-pink);
+    color: var(--accent-white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 70px; /* Ajuste conforme o tamanho da sua logo */
+    width: auto;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--accent-white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-pastel-lilac);
+}
+
+.menu-toggle {
+    display: none; /* Esconde o botão em telas maiores */
+    background: none;
+    border: none;
+    color: var(--accent-white);
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(216,191,216,0.6)), url('https://via.placeholder.com/1920x800/F8C8DC/FFFFFF?text=LAYCAKES+Confeitaria+Arapongas') no-repeat center center/cover;
+    color: var(--dark-text-color);
+    text-align: center;
+    padding: 120px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 550px;
+}
+
+.hero-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    margin-bottom: 15px;
+    color: var(--primary-pastel-pink);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    color: var(--dark-text-color);
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary-pastel-lilac);
+    color: var(--accent-white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background: var(--primary-pastel-pink);
+    transform: translateY(-3px);
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 80px 0;
+    background-color: var(--accent-white);
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: var(--primary-pastel-pink);
+    font-family: 'Great Vibes', cursive;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.menu-item {
+    background: var(--light-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-item h3 {
+    font-size: 2rem;
+    color: var(--secondary-pastel-lilac);
+    margin: 20px 20px 10px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.menu-item p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    padding: 0 20px 15px;
+}
+
+.menu-item .price {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-pastel-pink);
+    padding: 0 20px 20px;
+}
+
+/* Cadastro Section */
+.cadastro-section {
+    padding: 80px 0;
+    background-color: var(--light-bg-color);
+    text-align: center;
+}
+
+.cadastro-section h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: var(--primary-pastel-pink);
+    font-family: 'Great Vibes', cursive;
+}
+
+.cadastro-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.cadastro-form {
+    max-width: 550px;
+    margin: 0 auto;
+    background: var(--accent-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--dark-text-color);
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #f9f9f9;
+}
+
+.cadastro-form .btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.3rem;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-pastel-pink);
+    color: var(--accent-white);
+    padding: 50px 0 25px;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer-info, .footer-links {
+    flex: 1;
+    min-width: 280px;
+    margin-bottom: 30px;
+}
+
+.footer-info h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.footer-info p, .footer-links li a {
+    color: var(--accent-white);
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.footer-info a:hover, .footer-links li a:hover {
+    color: var(--secondary-pastel-lilac);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav {
+        display: none; /* Esconde o menu de navegação */
+        flex-direction: column;
+        width: 100%;
+        background: var(--primary-pastel-pink);
+        position: absolute;
+        top: 90px; /* Ajuste para ficar abaixo do cabeçalho */
+        left: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    header nav.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    header nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    header nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão hambúrguer */
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .footer-info, .footer-links {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .menu-section h2, .cadastro-section h2 {
+        font-size: 2.5rem;
+    }
+}
