@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-bg-color);
@@ -96,7 +96,7 @@ header nav ul li a:hover {
 }
 
 .hero-content h1 {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Chilanka', cursive;
     font-size: 5rem;
     margin-bottom: 15px;
     color: var(--primary-pastel-pink);
